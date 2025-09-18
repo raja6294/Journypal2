@@ -1,0 +1,233 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smart Tourist Safety System Design System */
+
+@layer base {
+  :root {
+    /* Brand Colors - Safety & Trust Theme */
+    --background: 210 11% 96%;
+    --foreground: 213 17% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 213 17% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 213 17% 12%;
+
+    /* Primary - Professional Blue for Trust */
+    --primary: 213 94% 18%;
+    --primary-foreground: 210 40% 98%;
+    --primary-glow: 213 94% 28%;
+
+    /* Secondary - Safety Blue */
+    --secondary: 210 40% 94%;
+    --secondary-foreground: 213 17% 12%;
+
+    /* Emergency & Alert Colors */
+    --emergency: 0 84% 55%;
+    --emergency-foreground: 0 0% 100%;
+    --emergency-glow: 0 84% 65%;
+    
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --success-glow: 142 76% 46%;
+
+    /* Safety Status Colors */
+    --safe-zone: 142 76% 36%;
+    --caution-zone: 38 92% 50%;
+    --danger-zone: 0 84% 55%;
+
+    --muted: 210 40% 94%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 213 94% 18%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214.3 31.8% 88%;
+    --input: 214.3 31.8% 88%;
+    --ring: 213 94% 18%;
+
+    /* Advanced Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-glow)) 50%, hsl(var(--accent)) 100%);
+    --gradient-emergency: linear-gradient(135deg, hsl(var(--emergency)) 0%, hsl(var(--emergency-glow)) 100%);
+    --gradient-success: linear-gradient(135deg, hsl(var(--success)) 0%, hsl(var(--success-glow)) 100%);
+    --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
+    --gradient-mesh: radial-gradient(circle at 25% 25%, hsl(var(--primary) / 0.1) 0%, transparent 50%), 
+                     radial-gradient(circle at 75% 75%, hsl(var(--primary-glow) / 0.1) 0%, transparent 50%);
+    --gradient-shimmer: linear-gradient(110deg, transparent 25%, rgba(255, 255, 255, 0.2) 50%, transparent 75%);
+    --gradient-aurora: linear-gradient(45deg, hsl(var(--primary)) 0%, hsl(var(--success)) 25%, hsl(var(--primary-glow)) 50%, hsl(var(--accent)) 75%, hsl(var(--primary)) 100%);
+
+    /* Enhanced Shadows */
+    --shadow-soft: 0 2px 8px -2px hsl(var(--primary) / 0.08);
+    --shadow-medium: 0 8px 32px -8px hsl(var(--primary) / 0.12);
+    --shadow-large: 0 16px 64px -16px hsl(var(--primary) / 0.16);
+    --shadow-emergency: 0 8px 32px -8px hsl(var(--emergency) / 0.25);
+    --shadow-glow: 0 0 32px hsl(var(--primary-glow) / 0.4);
+    --shadow-glow-large: 0 0 64px hsl(var(--primary-glow) / 0.3);
+    --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+    --shadow-floating: 0 20px 40px -12px hsl(var(--primary) / 0.25);
+
+    /* Advanced Animations & Timing Functions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-spring: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    --transition-elastic: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark theme for safety system */
+    --background: 213 17% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 213 17% 10%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 213 17% 10%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 213 94% 28%;
+    --primary-foreground: 213 17% 8%;
+    --primary-glow: 213 94% 38%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --emergency: 0 84% 65%;
+    --emergency-foreground: 0 0% 100%;
+    --emergency-glow: 0 84% 75%;
+    
+    --warning: 38 92% 60%;
+    --warning-foreground: 0 0% 100%;
+    
+    --success: 142 76% 46%;
+    --success-foreground: 0 0% 100%;
+    --success-glow: 142 76% 56%;
+
+    --safe-zone: 142 76% 46%;
+    --caution-zone: 38 92% 60%;
+    --danger-zone: 0 84% 65%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 213 94% 28%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84% 65%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 213 94% 28%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  /* Background Size for Shimmer Effect */
+  .bg-size-200 {
+    background-size: 200% 100%;
+  }
+
+  /* Smooth Transforms */
+  .transform-gpu {
+    transform: translate3d(0, 0, 0);
+  }
+
+  /* Interactive Elements */
+  .interactive-card {
+    @apply transition-all duration-300 hover:scale-105 hover:-translate-y-2 hover:shadow-floating;
+  }
+
+  /* Glass Effect */
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+
+  .glass-dark {
+    @apply bg-black/10 backdrop-blur-md border border-black/20;
+  }
+
+  /* Gradient Text */
+  .gradient-text {
+    @apply bg-gradient-hero bg-clip-text text-transparent;
+  }
+
+  /* Hover Effects */
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-glow;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300 hover:scale-105 hover:-translate-y-1;
+  }
+
+  .hover-float {
+    @apply transition-all duration-500 hover:scale-110 hover:-translate-y-3;
+  }
+
+  /* Button Enhancements */
+  .btn-shine {
+    @apply relative overflow-hidden;
+  }
+
+  .btn-shine::before {
+    content: '';
+    @apply absolute top-0 left-0 w-full h-full bg-gradient-shimmer opacity-0 transition-opacity duration-1000;
+  }
+
+  .btn-shine:hover::before {
+    @apply opacity-100;
+  }
+
+  /* Loading States */
+  .loading-pulse {
+    @apply animate-pulse bg-muted/50;
+  }
+
+  /* Scroll Animations */
+  .scroll-fade-in {
+    @apply opacity-0 translate-y-8 transition-all duration-700;
+  }
+
+  .scroll-fade-in.visible {
+    @apply opacity-100 translate-y-0;
+  }
+}
